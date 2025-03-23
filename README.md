@@ -48,7 +48,7 @@ python manage.py runserver
 To index a document:
 
 ```http
-POST /index
+POST /index/
 Content-Type: application/json
 
 {
@@ -75,7 +75,7 @@ Content-Type: application/json
 #### Basic Search
 
 ```http
-GET /search?q=quick%20fox
+GET /search/?q=quick%20fox
 ```
 
 Response:
@@ -97,7 +97,7 @@ Response:
 #### Field-Specific Search
 
 ```http
-GET /search?q=fox&field=title
+GET /search/?q=fox&field=title
 ```
 
 Response:
@@ -114,7 +114,7 @@ Response:
 #### Phrase Search
 
 ```http
-GET /search?q="lazy%20dog"&phrase=true
+GET /search/?q="lazy%20dog"&phrase=true
 ```
 
 Response:
